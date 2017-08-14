@@ -2,75 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="737fdadd-eea9-49f8-af57-67b23a660737" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/IGt.Batch.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/IGt.Push.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/Parser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/alias_demo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/demo-pushinfo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/demo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/exception/RequestException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/IGt.APNPayload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/IGt.AppMessage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/IGt.ListMessage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/IGt.Message.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/IGt.Req.last.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/IGt.Req.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/IGt.SingleMessage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/IGt.Target.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/template/IGt.APNTemplate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/template/IGt.BaseTemplate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/template/IGt.LinkTemplate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/template/IGt.NotificationTemplate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/template/IGt.NotyPopLoadTemplate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/template/IGt.TransmissionTemplate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/utils/ApiUrlRespectUtils.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/utils/ApnsUtils.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/utils/AppConditions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/utils/GTConfig.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/utils/HttpManager.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/utils/LangUtils.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/igetui/utils/LogUtils.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/protobuf/encoding/pb_base128.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/protobuf/pb_message.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/protobuf/reader/pb_input_reader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/protobuf/reader/pb_input_string_reader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/protobuf/type/pb_bool.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/protobuf/type/pb_bytes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/protobuf/type/pb_enum.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/protobuf/type/pb_int.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/protobuf/type/pb_scalar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/protobuf/type/pb_signed_int.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/getui/protobuf/type/pb_string.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/GeTuiService.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/GeTuiServiceProvider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/PushMessageToApp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/PushMessageToCenter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/UserApp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/UserPushOption.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Console/Commands/MessagePush.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Entities/Message.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Entities/MessagePush.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Entities/UserApp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Entities/UserPushOption.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Helpers/helpers.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Http/Controllers/GetuiController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Http/Controllers/MessageApiController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Http/Controllers/MessageController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Http/Controllers/MessagePushController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Repositories/MessageApiRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Repositories/MessagePushApiRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Repositories/MessagePushRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Repositories/MessageRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Repositories/UserAppApiRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Repositories/UserPushOptionApiRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Repositories/UserPushOptionRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Validators/MessagePushValidator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/app/Validators/MessageValidator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/autoload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/config/getui.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/config/getui_errorcode.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geTui/src/routes/getui.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/PushMessageToCenter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/UserApp.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/UserPushOption.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/app/Entities/Message.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/app/Entities/MessagePush.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/app/Entities/UserPushOption.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/app/Http/Controllers/MessageApiController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/app/Http/Controllers/MessageController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/app/Http/Controllers/MessagePushController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/app/Repositories/MessageApiRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/app/Repositories/MessagePushApiRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/app/Repositories/MessagePushRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/app/Repositories/MessageRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/app/Repositories/UserPushOptionApiRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/app/Repositories/UserPushOptionRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/app/Validators/MessagePushValidator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/app/Validators/MessageValidator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geTui/src/routes/getui.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geTui/src/GeTuiService.php" afterPath="$PROJECT_DIR$/geTui/src/GeTuiService.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geTui/src/GeTuiServiceProvider.php" afterPath="$PROJECT_DIR$/geTui/src/GeTuiServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geTui/src/PushMessageToApp.php" afterPath="$PROJECT_DIR$/geTui/src/PushMessageToApp.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geTui/src/app/Console/Commands/MessagePush.php" afterPath="$PROJECT_DIR$/geTui/src/app/Console/Commands/MessagePush.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geTui/src/app/Http/Controllers/GetuiController.php" afterPath="$PROJECT_DIR$/geTui/src/app/Http/Controllers/GetuiController.php" />
     </list>
     <ignored path="geTui.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,31 +47,69 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GetuiController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geTui/src/app/Http/Controllers/GetuiController.php">
+      <file leaf-file-name="GeTuiServiceProvider.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geTui/src/GeTuiServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="-11.885715">
+              <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="30" />
+              <folding>
+                <element signature="e#24#72#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserAppApiRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geTui/src/app/Repositories/UserAppApiRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.6857142">
+              <caret line="25" column="19" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="22" />
+              <folding>
+                <element signature="e#42#49#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserApp.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geTui/src/app/Entities/UserApp.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="8.114285">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+              <folding>
+                <element signature="e#37#76#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helpers.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geTui/src/app/Helpers/helpers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="47.485714">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeTuiServiceProvider.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geTui/src/GeTuiServiceProvider.php">
+      <file leaf-file-name="GetuiController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/geTui/src/app/Http/Controllers/GetuiController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.857142">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-2.562044">
+              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+              <folding>
+                <element signature="e#47#99#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeTuiService.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geTui/src/GeTuiService.php">
+      <file leaf-file-name="MessagePush.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geTui/src/app/Console/Commands/MessagePush.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.9428573">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="41" />
+            <state vertical-scroll-proportion="-4.457143">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -132,11 +125,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getui.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/geTui/src/config/getui.php">
+      <file leaf-file-name="GeTuiService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geTui/src/GeTuiService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.0875913">
+            <state vertical-scroll-proportion="-4.246154">
+              <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+              <folding>
+                <element signature="e#26#61#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autoload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geTui/src/autoload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="11.085714">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IGt.Push.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geTui/getui/IGt.Push.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.2285714">
+              <caret line="235" column="20" selection-start-line="235" selection-start-column="20" selection-end-line="235" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -150,7 +165,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/geTui/src/PushMessageToApp.php" />
+        <option value="$PROJECT_DIR$/geTui/src/GeTuiService.php" />
         <option value="$PROJECT_DIR$/geTui/src/GeTuiServiceProvider.php" />
+        <option value="$PROJECT_DIR$/geTui/src/app/Console/Commands/MessagePush.php" />
+        <option value="$PROJECT_DIR$/geTui/src/app/Http/Controllers/GetuiController.php" />
       </list>
     </option>
   </component>
@@ -246,7 +265,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Repositories" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -261,6 +284,122 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="geTui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geTui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geTui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geTui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geTui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geTui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geTui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geTui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geTui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geTui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Commands" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geTui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geTui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geTui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="getui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -318,9 +457,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26946566" sideWeight="0.5" order="-1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26946566" sideWeight="0.5" order="-1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -338,26 +477,66 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/geTui/src/app/Http/Controllers/GetuiController.php">
+    <entry file="file://$PROJECT_DIR$/geTui/src/config/getui.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-11.2">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geTui/src/PushMessageToApp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-231.77142">
+          <caret line="312" column="48" selection-start-line="312" selection-start-column="40" selection-end-line="312" selection-end-column="48" />
+          <folding>
+            <element signature="e#26#54#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geTui/src/app/Repositories/UserAppApiRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6857142">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="22" />
+          <folding>
+            <element signature="e#42#49#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geTui/getui/IGt.Push.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.2285714">
+          <caret line="235" column="20" selection-start-line="235" selection-start-column="20" selection-end-line="235" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/geTui/src/GeTuiServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.857142">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-11.885715">
+          <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="30" />
+          <folding>
+            <element signature="e#24#72#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/geTui/src/GeTuiService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.9428573">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="41" />
+        <state vertical-scroll-proportion="-4.246154">
+          <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+          <folding>
+            <element signature="e#26#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geTui/src/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="11.085714">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -370,11 +549,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/geTui/src/config/getui.php">
+    <entry file="file://$PROJECT_DIR$/geTui/src/app/Console/Commands/MessagePush.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0875913">
+        <state vertical-scroll-proportion="-4.457143">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geTui/src/app/Entities/UserApp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.114285">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding>
+            <element signature="e#37#76#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geTui/src/app/Helpers/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="47.485714">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geTui/src/app/Http/Controllers/GetuiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.562044">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <folding>
+            <element signature="e#47#99#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

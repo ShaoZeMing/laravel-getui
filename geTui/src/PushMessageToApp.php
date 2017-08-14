@@ -8,7 +8,7 @@ use GeTui\App\Repositories\MessageApiRepository;
 use GeTui\App\Repositories\MessagePushApiRepository;
 use GeTui\GeTuiService;
 
-require_once  base_path(). '/packages/geTui/geTui/getui/IGt.Push.php';
+require_once  '../getui/IGt.Push.php';
 
 class PushMessageToApp
 {
@@ -268,28 +268,7 @@ class PushMessageToApp
             return false;
        }
     }
-    /**
-    * 写入消息中心，暂时停用
-    *
-    * @author zhangjun@xiaobaiyoupin.com
-    *
-    * @param  mixed Request $request
-    *
-    * @return mixed
-    */
-    // public function insertMessagePushes($params, $userIds)
-    // {
-    //     Log::info('c=pushMsgToApp f=insertMessagePushes msg=消息中心入库');
-    //     if(!$userIds || !is_array($userIds)) {
-    //         $params['uid'] = 0;
-    //         $pushesMsgId   = $this->messagePushApiRepository->insert($params);
-    //         return true;
-    //     }
-    //     foreach($userIds as $uid) {
-    //         $params['uid'] = $uid;
-    //         $pushesMsgId   = $this->messagePushApiRepository->insert($params);
-    //     }
-    // }
+
 
     public function getPushResult($taskId)
     {

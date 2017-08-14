@@ -44,7 +44,6 @@ class GeTuiServiceProvider extends ServiceProvider
     public function register()
     {
         //
-        include __DIR__.'/routes/getui.php';
 
         $this->app->singleton('MessageToCenter', function ($app) {
             $messagePushApiRepository = new MessagePushApiRepository($app);

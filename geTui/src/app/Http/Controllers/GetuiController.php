@@ -16,7 +16,7 @@ use GeTui\App\Repositories\MessageRepository;
 use GeTui\App\Validators\MessageValidator;
 use Prettus\Validator\Contracts\ValidatorInterface;
 
-require_once  base_path(). '/packages/geTui/geTui/getui/IGt.Push.php';
+require_once  '../../../../getui/IGt.Push.php';
 
 trait GeTuiController 
 {

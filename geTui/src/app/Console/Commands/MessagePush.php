@@ -4,7 +4,6 @@ namespace  GeTui\App\Console\Commands;
 
 use Illuminate\Console\Command;
 use GeTui\App\Repositories\MessageApiRepository;
-use GeTui\App\Repositories\UserAppApiRepository;
 use Illuminate\Support\Facades\Log;
 
 class MessagePush extends Command
