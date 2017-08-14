@@ -1,6 +1,6 @@
 {
     "name": "shaozeming/laravel-getui",
-    "description": "基于larave的getui服务",
+    "description": "一个基于laravel框架的个推push推送服务",
     "license": "MIT",
     "authors": [
         {
@@ -11,7 +11,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.3"
+        "php": ">=5.3",
+        "laravel": ">=5.0"
     },
     "autoload": {
         "psr-4": {
