@@ -1,0 +1,21 @@
+{
+    "name": "shaozeming/laravel-getui",
+    "description": "基于larave的getui服务",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "shaozeming",
+            "email": "szm19920426@gmail.com",
+            "homepage": "http://blog.4d4k.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "geTui\\geTui\\": "src/"
+        }
+    }
+}
