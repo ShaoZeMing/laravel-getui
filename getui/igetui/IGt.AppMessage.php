@@ -1,6 +1,6 @@
 <?php
 header("Content-Type: text/html; charset=utf-8");
-require_once(dirname(__FILE__) .'/'.'utils/AppConditions.php');
+require_once(dirname(__FILE__) . '/' . 'utils/AppConditions.php');
 class IGtAppMessage extends IGtMessage{
 	
 	//array('','',..)

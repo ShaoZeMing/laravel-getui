@@ -5,7 +5,7 @@ namespace  GeTui;
 use Illuminate\Support\Facades\Log;
 use Laravel\Passport\HasApiTokens;
 
-require_once  '../getui/IGt.Push.php';
+require_once '../getui/IGt.Push.php';
 
 class GeTuiService
 {

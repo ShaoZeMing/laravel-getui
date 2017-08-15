@@ -8,7 +8,7 @@ use GeTui\App\Repositories\MessageApiRepository;
 use GeTui\App\Repositories\MessagePushApiRepository;
 use GeTui\GeTuiService;
 
-require_once  '../getui/IGt.Push.php';
+require_once '../getui/IGt.Push.php';
 
 class PushMessageToApp
 {
