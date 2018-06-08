@@ -134,6 +134,6 @@ class GTConfig
 
     public static function getSDKVersion()
     {
-        return "4.0.1.0";
+        return "4.0.1.7";
     }
 }

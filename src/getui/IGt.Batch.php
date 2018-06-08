@@ -49,6 +49,7 @@ class IGtBatch
         $params = $this->push->getSingleMessagePostData($message,$target);
         return json_encode($params);
     }
+
     public function submit()
     {
         $requestId = uniqid();

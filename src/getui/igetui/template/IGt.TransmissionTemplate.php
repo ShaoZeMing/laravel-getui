@@ -59,4 +59,19 @@ class IGtTransmissionTemplate extends IGtBaseTemplate {
 	function  set_transmissionContent($transmissionContent) {
 		$this->transmissionContent = $transmissionContent;
 	}
+
+    function set3rdNotifyInfo($notify) {
+        if ($notify->get_title() == null || $notify -> get_content() == null) {
+            throw new Exception("notify title or content cannot be null");
+        }
+
+        $notifyInfo = new NotifyInfo();
+        $notifyInfo -> set_title($notify -> get_title());
+        $notifyInfo -> set_content($notify -> get_content());
+        $notifyInfo -> set_payload($notify -> get_payload());
+
+        $pushInfo = $this-> get_pushInfo();
+        $pushInfo -> set_notifyInfo($notifyInfo);
+        $pushInfo -> set_validNotify(true);
+    }
 }

@@ -45,10 +45,6 @@ define('Alias','请输入别名');
 
 pushMessageToApp();
 
-//pushAPN();
-
-//pushAPNL();
-
 //getPushMessageResultDemo();
 
 
@@ -83,115 +79,6 @@ function getPushMessageResultDemo(){
     var_dump($ret);
 }
 
-function pushAPN(){
-
-    //APN简单推送
-        $igt = new IGeTui(HOST,APPKEY,MASTERSECRET);
-        $template = new IGtAPNTemplate();
-        $apn = new IGtAPNPayload();
-        $alertmsg=new SimpleAlertMsg();
-        $alertmsg->alertMsg="";
-        $apn->alertMsg=$alertmsg;
-//        $apn->badge=2;
-        $apn->sound="";
-        $apn->add_customMsg("payload","payload");
-        $apn->contentAvailable=1;
-        $apn->category="ACTIONABLE";
-        $template->set_apnInfo($apn);
-        $message = new IGtSingleMessage();
-
-    //APN高级推送
-//        $igt = new IGeTui(HOST,APPKEY,MASTERSECRET);
-//        $template = new IGtAPNTemplate();
-//        $apn = new IGtAPNPayload();
-//        $alertmsg=new DictionaryAlertMsg();
-//        $alertmsg->body="body";
-//        $alertmsg->actionLocKey="ActionLockey";
-//        $alertmsg->locKey="LocKey";
-//        $alertmsg->locArgs=array("locargs");
-//        $alertmsg->launchImage="launchimage";
-////        IOS8.2 支持
-//        $alertmsg->title="Title";
-//        $alertmsg->titleLocKey="TitleLocKey";
-//        $alertmsg->titleLocArgs=array("TitleLocArg");
-//
-//        $apn->alertMsg=$alertmsg;
-//        $apn->badge=7;
-//        $apn->sound="test1.wav";
-//        $apn->add_customMsg("payload","payload");
-//        $apn->contentAvailable=1;
-//        $apn->category="ACTIONABLE";
-//        $template->set_apnInfo($apn);
-//        $message = new IGtSingleMessage();
-
-    //PushApn老方式传参
-//    $igt = new IGeTui(HOST,APPKEY,MASTERSECRET);
-//    $template = new IGtAPNTemplate();
-//    $template->set_pushInfo("actionLocKey", 6, "body", "", "payload", "locKey", "locArgs", "launchImage",1);
-//    $message = new IGtSingleMessage();
-////
-//    $message->set_data($template);
-   $ret = $igt->pushAPNMessageToSingle(APPID, DEVICETOKEN, $message);
-    var_dump($ret);
-}
-
-function pushAPNL(){
-
-    //APN简单推送
-//        $igt = new IGeTui(HOST,APPKEY,MASTERSECRET);
-//        $template = new IGtAPNTemplate();
-//        $apn = new IGtAPNPayload();
-//        $alertmsg=new SimpleAlertMsg();
-//        $alertmsg->alertMsg="";
-//        $apn->alertMsg=$alertmsg;
-////        $apn->badge=2;
-////        $apn->sound="";
-//        $apn->add_customMsg("payload","payload");
-//        $apn->contentAvailable=1;
-//        $apn->category="ACTIONABLE";
-//        $template->set_apnInfo($apn);
-//        $message = new IGtSingleMessage();
-
-    //APN高级推送
-    $igt = new IGeTui(HOST,APPKEY,MASTERSECRET);
-    $template = new IGtAPNTemplate();
-    $apn = new IGtAPNPayload();
-//        $alertmsg=new DictionaryAlertMsg();
-//        $alertmsg->body="body";
-//        $alertmsg->actionLocKey="ActionLockey";
-//        $alertmsg->locKey="LocKey";
-//        $alertmsg->locArgs=array("locargs");
-//        $alertmsg->launchImage="launchimage";
-////        IOS8.2 支持
-//        $alertmsg->title="Title";
-//        $alertmsg->titleLocKey="TitleLocKey";
-//        $alertmsg->titleLocArgs=array("TitleLocArg");
-//        $apn->alertMsg=$alertmsg;
-
-//        $apn->badge=7;
-//        $apn->sound="com.gexin.ios.silence";
-    $apn->add_customMsg("payload","payload");
-//        $apn->contentAvailable=1;
-//        $apn->category="ACTIONABLE";
-    $template->set_apnInfo($apn);
-    $message = new IGtSingleMessage();
-
-    //PushApn老方式传参
-//    $igt = new IGeTui(HOST,APPKEY,MASTERSECRET);
-//    $template = new IGtAPNTemplate();
-//    $template->set_pushInfo("", 4, "", "", "", "", "", "");
-//    $message = new IGtSingleMessage();
-
-    //多个用户推送接口
-    putenv("needDetails=true");
-    $listmessage = new IGtListMessage();
-    $listmessage->set_data($template);
-    $contentId = $igt->getAPNContentId(APPID, $listmessage);
-    //$deviceTokenList = array("3337de7aa297065657c087a041d28b3c90c9ed51bdc37c58e8d13ced523f5f5f");
-    $deviceTokenList = array(DEVICETOKEN);
-    $ret = $igt->pushAPNMessageToList(APPID, $contentId, $deviceTokenList);
-    var_dump($ret);
-}
 
 //用户状态查询
 function getUserStatus() {
@@ -290,22 +177,34 @@ function pushMessageToSingleBatch()
     // 3.NotificationTemplate：通知透传功能模板
     // 4.NotyPopLoadTemplate：通知弹框下载功能模板
 
-//    $template = IGtNotyPopLoadTemplateDemo();
-    //$template = IGtLinkTemplateDemo();
-    //$template = IGtNotificationTemplateDemo();
-    $template = IGtTransmissionTemplateDemo();
+    //$template = IGtNotyPopLoadTemplateDemo();
+    $templateLink = IGtLinkTemplateDemo();
+    $templateNoti = IGtNotificationTemplateDemo();
+    //$template = IGtTransmissionTemplateDemo();
 
     //个推信息体
-    $message = new IGtSingleMessage();
-    $message->set_isOffline(true);//是否离线
-    $message->set_offlineExpireTime(12 * 1000 * 3600);//离线时间
-    $message->set_data($template);//设置推送消息类型
-//    $message->set_PushNetWorkType(1);//设置是否根据WIFI推送消息，1为wifi推送，0为不限制推送
+    $messageLink = new IGtSingleMessage();
+    $messageLink->set_isOffline(true);//是否离线
+    $messageLink->set_offlineExpireTime(12 * 1000 * 3600);//离线时间
+    $messageLink->set_data($templateLink);//设置推送消息类型
+    //$messageLink->set_PushNetWorkType(1);//设置是否根据WIFI推送消息，1为wifi推送，0为不限制推送
 
-    $target = new IGtTarget();
-    $target->set_appId(APPID);
-    $target->set_clientId(CID);
-    $batch->add($message, $target);
+    $targetLink = new IGtTarget();
+    $targetLink->set_appId(APPID);
+    $targetLink->set_clientId(CID1);
+    $batch->add($messageLink, $targetLink);
+
+    //个推信息体
+    $messageNoti = new IGtSingleMessage();
+    $messageNoti->set_isOffline(true);//是否离线
+    $messageNoti->set_offlineExpireTime(12 * 1000 * 3600);//离线时间
+    $messageNoti->set_data($templateNoti);//设置推送消息类型
+    //$messageNoti->set_PushNetWorkType(1);//设置是否根据WIFI推送消息，1为wifi推送，0为不限制推送
+
+    $targetNoti = new IGtTarget();
+    $targetNoti->set_appId(APPID);
+    $targetNoti->set_clientId(CID2);
+    $batch->add($messageNoti, $targetNoti);
     try {
 
         $rep = $batch->submit();
@@ -440,24 +339,6 @@ function IGtLinkTemplateDemo(){
     $template ->set_isClearable(true);//通知栏是否可清除
     $template ->set_url("http://www.igetui.com/");//打开连接地址
     //$template->set_duration(BEGINTIME,ENDTIME); //设置ANDROID客户端在此时间区间内展示消息
-    //iOS推送需要设置的pushInfo字段
-//        $apn = new IGtAPNPayload();
-//        $apn->alertMsg = "alertMsg";
-//        $apn->badge = 11;
-//        $apn->actionLocKey = "启动";
-//    //        $apn->category = "ACTIONABLE";
-//    //        $apn->contentAvailable = 1;
-//        $apn->locKey = "通知栏内容";
-//        $apn->title = "通知栏标题";
-//        $apn->titleLocArgs = array("titleLocArgs");
-//        $apn->titleLocKey = "通知栏标题";
-//        $apn->body = "body";
-//        $apn->customMsg = array("payload"=>"payload");
-//        $apn->launchImage = "launchImage";
-//        $apn->locArgs = array("locArgs");
-//
-//        $apn->sound=("test1.wav");;
-//        $template->set_apnInfo($apn);
     return $template;
 }
 
@@ -474,24 +355,6 @@ function IGtNotificationTemplateDemo(){
     $template->set_isVibrate(true);//是否震动
     $template->set_isClearable(true);//通知栏是否可清除
     //$template->set_duration(BEGINTIME,ENDTIME); //设置ANDROID客户端在此时间区间内展示消息
-    //iOS推送需要设置的pushInfo字段
-//        $apn = new IGtAPNPayload();
-//        $apn->alertMsg = "alertMsg";
-//        $apn->badge = 11;
-//        $apn->actionLocKey = "启动";
-//    //        $apn->category = "ACTIONABLE";
-//    //        $apn->contentAvailable = 1;
-//        $apn->locKey = "通知栏内容";
-//        $apn->title = "通知栏标题";
-//        $apn->titleLocArgs = array("titleLocArgs");
-//        $apn->titleLocKey = "通知栏标题";
-//        $apn->body = "body";
-//        $apn->customMsg = array("payload"=>"payload");
-//        $apn->launchImage = "launchImage";
-//        $apn->locArgs = array("locArgs");
-//
-//        $apn->sound=("test1.wav");;
-//        $template->set_apnInfo($apn);
     return $template;
 }
 

@@ -15,8 +15,8 @@
     },
     "autoload": {
         "psr-4": {
-            "GeTui\\": "src/"
-        },
-        "classmap": ["getui/"]
+            "Shaozeming\\GeTui\\": "src/"
+        }
     }
+
 }

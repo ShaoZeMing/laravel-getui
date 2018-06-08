@@ -3,7 +3,7 @@
 class IGtMessage{
 	var  $isOffline;
 	/*
-	 * 过多久该消息离线失效（单位毫秒） 支持1-72小时*60000秒，默认1小时 60*1000
+	 * 过多久该消息离线失效（单位毫秒） 支持1-72小时*3600000秒，默认1小时
 	 */
 	var $offlineExpireTime;
 

@@ -13,6 +13,7 @@ class IGtBaseTemplate
     function get_transparent()
     {
         $transparent = new Transparent();
+        $transparent->set_templateId($this->getTemplateId());
         $transparent->set_id('');
         $transparent->set_messageId('');
         $transparent->set_taskId('');
@@ -42,6 +43,10 @@ class IGtBaseTemplate
 
     function get_durcondition()
     {
+		if ($this->duration == null || $this->duration == '')
+		{
+			return "";
+		}
         return "duration=" . $this->duration;
     }
 
@@ -97,9 +102,6 @@ class IGtBaseTemplate
 
     function set_pushInfo($actionLocKey, $badge, $message, $sound, $payload, $locKey, $locArgs, $launchImage, $contentAvailable = 0)
     {
-        $this->pushInfo = new PushInfo();
-        $this->pushInfo->set_invalidAPN(true);
-        $this->pushInfo->set_invalidMPN(true);
         $apn = new IGtAPNPayload();
 
         $alertMsg = new DictionaryAlertMsg();
@@ -158,9 +160,9 @@ class IGtBaseTemplate
         if ($len > IGtAPNPayload::$PAYLOAD_MAX_BYTES) {
             throw new Exception("APN payload length overlength (" . $len . ">" . IGtAPNPayload::$PAYLOAD_MAX_BYTES . ")");
         }
-        $this->pushInfo = new PushInfo();
-        $this->pushInfo->set_apnJson($payload);
-        $this->pushInfo->set_invalidAPN(false);
+        $pushInfo = $this->get_pushInfo();
+        $pushInfo->set_apnJson($payload);
+        $pushInfo->set_invalidAPN(false);
     }
 
     function  set_appId($appId)
@@ -184,6 +186,25 @@ class IGtBaseTemplate
             preg_match_all("/./u", $str, $ar);
             return count($ar[0]);
         }
+    }
+
+    function getTemplateId() {
+        if($this instanceof IGtNotificationTemplate) {
+            return 0;
+        }
+        if($this instanceof IGtLinkTemplate) {
+            return 1;
+        }
+        if($this instanceof IGtNotyPopLoadTemplate) {
+            return 2;
+        }
+        if($this instanceof  IGtTransmissionTemplate) {
+            return 4;
+        }
+        if($this instanceof IGtAPNTemplate) {
+            return 5;
+        }
+        return -1;
     }
 
 

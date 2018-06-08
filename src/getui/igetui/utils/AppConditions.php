@@ -5,6 +5,12 @@
  * Date: 2015/9/21
  * Time: 21:54
  */
+ class OptType {
+    const _OR_ = 0;
+    const _AND_ = 1;
+    const _NOT_ = 2;
+ }
+
  class AppConditions {
  	//手机类型
  	const PHONE_TYPE = "phoneType";
@@ -30,10 +36,10 @@
 
 	function addCondition3($key, $values, $optType=0) {
         $item = array();
-        $item["key"]       = $key;
-        $item["values"]    = $values;
-        $item["optType"]   = $optType;
-        $this->condition[] = $item;
+        $item["key"] = $key;
+        $item["values"] = $values;
+        $item["optType"] = $optType;
+        $this -> condition[] = $item;
         return $this;
     }
      function addCondition2($key, $values) {

@@ -17,6 +17,8 @@ class CmdID extends PBEnum
   const SERVERNOTIFY  = 13;
   const PUSHLISTRESULT  = 14;
   const SERVERNOTIFYRESULT  = 15;
+  const STOPBATCHTASK  = 16;
+  const STOPBATCHTASKRESULT  = 17;
 }
 class GtAuth extends PBMessage
 {
@@ -89,6 +91,8 @@ class GtAuthResult extends PBMessage
     $this->values["3"] = "";
     $this->fields["4"] = "PBString";
     $this->values["4"] = "";
+    $this->fields["5"] = "PBString";
+    $this->values["5"] = array();
   }
   function code()
   {
@@ -121,6 +125,30 @@ class GtAuthResult extends PBMessage
   function set_info($value)
   {
     return $this->_set_value("4", $value);
+  }
+  function appid($offset)
+  {
+    $v = $this->_get_arr_value("5", $offset);
+    return $v->get_value();
+  }
+  function append_appid($value)
+  {
+    $v = $this->_add_arr_value("5");
+    $v->set_value($value);
+  }
+  function set_appid($index, $value)
+  {
+    $v = new $this->fields["5"]();
+    $v->set_value($value);
+    $this->_set_arr_value("5", $index, $v);
+  }
+  function remove_last_appid()
+  {
+    $this->_remove_last_arr_value("5");
+  }
+  function appid_size()
+  {
+    return $this->_get_arr_size("5");
   }
 }
 class ReqServList extends PBMessage
@@ -220,6 +248,7 @@ class PushResult_EPushResult extends PBEnum
   const busy  = 4;
   const success_startBatch  = 5;
   const success_endBatch  = 6;
+  const successed_async  = 7;
 }
 class PushResult extends PBMessage
 {
@@ -395,6 +424,58 @@ class AppStartUp extends PBMessage
     return $this->_set_value("3", $value);
   }
 }
+class InnerFiled_Type extends PBEnum
+{
+  const str  = 0;
+  const int32  = 1;
+  const int64  = 2;
+  const floa  = 3;
+  const doub  = 4;
+  const bool  = 5;
+}
+class InnerFiled extends PBMessage
+{
+  var $wired_type = PBMessage::WIRED_LENGTH_DELIMITED;
+  public function __construct($reader=null)
+  {
+    parent::__construct($reader);
+    $this->fields["1"] = "PBString";
+    $this->values["1"] = "";
+    $this->fields["2"] = "PBString";
+    $this->values["2"] = "";
+    $this->fields["3"] = "InnerFiled_Type";
+    $this->values["3"] = "";
+  }
+  function key()
+  {
+    return $this->_get_value("1");
+  }
+  function set_key($value)
+  {
+    return $this->_set_value("1", $value);
+  }
+  function val()
+  {
+    return $this->_get_value("2");
+  }
+  function set_val($value)
+  {
+    return $this->_set_value("2", $value);
+  }
+  function type()
+  {
+    return $this->_get_value("3");
+  }
+  function set_type($value)
+  {
+    return $this->_set_value("3", $value);
+  }
+}
+class SMSStatus extends PBEnum
+{
+  const unread  = 0;
+  const read  = 1;
+}
 class ActionChain_Type extends PBEnum
 {
   const refer  = 0;
@@ -420,11 +501,6 @@ class ActionChain_Type extends PBEnum
   const enablelog  = 20;
   const disablelog  = 21;
   const uploadlog  = 22;
-}
-class ActionChain_SMSStatus extends PBEnum
-{
-  const unread  = 0;
-  const read  = 1;
 }
 class ActionChain extends PBMessage
 {
@@ -480,7 +556,7 @@ class ActionChain extends PBMessage
     $this->values["181"] = "";
     $this->fields["182"] = "PBInt";
     $this->values["182"] = "";
-    $this->fields["183"] = "ActionChain_SMSStatus";
+    $this->fields["183"] = "SMSStatus";
     $this->values["183"] = "";
     $this->fields["200"] = "PBInt";
     $this->values["200"] = "";
@@ -514,6 +590,10 @@ class ActionChain extends PBMessage
     $this->values["340"] = "";
     $this->fields["360"] = "PBString";
     $this->values["360"] = "";
+    $this->fields["380"] = "PBString";
+    $this->values["380"] = "";
+    $this->fields["381"] = "InnerFiled";
+    $this->values["381"] = array();
   }
   function actionId()
   {
@@ -847,6 +927,72 @@ class ActionChain extends PBMessage
   {
     return $this->_set_value("360", $value);
   }
+  function stype()
+  {
+    return $this->_get_value("380");
+  }
+  function set_stype($value)
+  {
+    return $this->_set_value("380", $value);
+  }
+  function field($offset)
+  {
+    return $this->_get_arr_value("381", $offset);
+  }
+  function add_field()
+  {
+    return $this->_add_arr_value("381");
+  }
+  function set_field($index, $value)
+  {
+    $this->_set_arr_value("381", $index, $value);
+  }
+  function remove_last_field()
+  {
+    $this->_remove_last_arr_value("381");
+  }
+  function field_size()
+  {
+    return $this->_get_arr_size("381");
+  }
+}
+class NotifyInfo extends PBMessage
+{
+  var $wired_type = PBMessage::WIRED_LENGTH_DELIMITED;
+  public function __construct($reader=null)
+  {
+    parent::__construct($reader);
+    $this->fields["1"] = "PBString";
+    $this->values["1"] = "";
+    $this->fields["2"] = "PBString";
+    $this->values["2"] = "";
+    $this->fields["3"] = "PBString";
+    $this->values["3"] = "";
+  }
+  function title()
+  {
+    return $this->_get_value("1");
+  }
+  function set_title($value)
+  {
+    return $this->_set_value("1", $value);
+  }
+  function content()
+  {
+    return $this->_get_value("2");
+  }
+  function set_content($value)
+  {
+    return $this->_set_value("2", $value);
+  }
+  function payload()
+  {
+    return $this->_get_value("3");
+  }
+  function set_payload($value)
+  {
+    return $this->_set_value("3", $value);
+  }
 }
 class PushInfo extends PBMessage
 {
@@ -882,6 +1028,10 @@ class PushInfo extends PBMessage
     $this->values["13"] = "";
     $this->fields["14"] = "PBString";
     $this->values["14"] = "";
+    $this->fields["15"] = "PBBool";
+    $this->values["15"] = "";
+    $this->fields["16"] = "NotifyInfo";
+    $this->values["16"] = "";
   }
   function message()
   {
@@ -995,6 +1145,22 @@ class PushInfo extends PBMessage
   {
     return $this->_set_value("14", $value);
   }
+  function validNotify()
+  {
+    return $this->_get_value("15");
+  }
+  function set_validNotify($value)
+  {
+    return $this->_set_value("15", $value);
+  }
+  function notifyInfo()
+  {
+    return $this->_get_value("16");
+  }
+  function set_notifyInfo($value)
+  {
+    return $this->_set_value("16", $value);
+  }
 }
 class Transparent extends PBMessage
 {
@@ -1020,6 +1186,10 @@ class Transparent extends PBMessage
     $this->values["8"] = array();
     $this->fields["9"] = "PBString";
     $this->values["9"] = array();
+    $this->fields["10"] = "PBInt";
+    $this->values["10"] = "";
+    $this->fields["11"] = "PBString";
+    $this->values["11"] = "";
   }
   function id()
   {
@@ -1121,6 +1291,22 @@ class Transparent extends PBMessage
   {
     return $this->_get_arr_size("9");
   }
+  function templateId()
+  {
+    return $this->_get_value("10");
+  }
+  function set_templateId($value)
+  {
+    return $this->_set_value("10", $value);
+  }
+  function taskGroupId()
+  {
+    return $this->_get_value("11");
+  }
+  function set_taskGroupId($value)
+  {
+    return $this->_set_value("11", $value);
+  }
 }
 class OSMessage extends PBMessage
 {
@@ -1210,6 +1396,8 @@ class Target extends PBMessage
     $this->values["1"] = "";
     $this->fields["2"] = "PBString";
     $this->values["2"] = "";
+    $this->fields["3"] = "PBString";
+    $this->values["3"] = "";
   }
   function appId()
   {
@@ -1226,6 +1414,14 @@ class Target extends PBMessage
   function set_clientId($value)
   {
     return $this->_set_value("2", $value);
+  }
+  function alias()
+  {
+    return $this->_get_value("3");
+  }
+  function set_alias($value)
+  {
+    return $this->_set_value("3", $value);
   }
 }
 class PushOSSingleMessage extends PBMessage
@@ -1288,6 +1484,12 @@ class MMPMessage extends PBMessage
     $this->values["7"]->value = true;
     $this->fields["8"] = "PBInt";
     $this->values["8"] = "";
+    $this->fields["9"] = "PBString";
+    $this->values["9"] = "";
+    $this->fields["10"] = "PBBool";
+    $this->values["10"] = "";
+    $this->values["10"] = new PBBool();
+    $this->values["10"]->value = true;
   }
   function transparent()
   {
@@ -1345,6 +1547,22 @@ class MMPMessage extends PBMessage
   {
     return $this->_set_value("8", $value);
   }
+  function cdnUrl()
+  {
+    return $this->_get_value("9");
+  }
+  function set_cdnUrl($value)
+  {
+    return $this->_set_value("9", $value);
+  }
+  function isSync()
+  {
+    return $this->_get_value("10");
+  }
+  function set_isSync($value)
+  {
+    return $this->_set_value("10", $value);
+  }
 }
 class PushMMPSingleMessage extends PBMessage
 {
@@ -1358,6 +1576,8 @@ class PushMMPSingleMessage extends PBMessage
     $this->values["2"] = "";
     $this->fields["3"] = "Target";
     $this->values["3"] = "";
+    $this->fields["4"] = "PBString";
+    $this->values["4"] = "";
   }
   function seqId()
   {
@@ -1383,6 +1603,14 @@ class PushMMPSingleMessage extends PBMessage
   {
     return $this->_set_value("3", $value);
   }
+  function requestId()
+  {
+    return $this->_get_value("4");
+  }
+  function set_requestId($value)
+  {
+    return $this->_set_value("4", $value);
+  }
 }
 class StartMMPBatchTask extends PBMessage
 {
@@ -1396,6 +1624,8 @@ class StartMMPBatchTask extends PBMessage
     $this->values["2"] = "";
     $this->fields["3"] = "PBString";
     $this->values["3"] = "";
+    $this->fields["4"] = "PBString";
+    $this->values["4"] = "";
   }
   function message()
   {
@@ -1420,6 +1650,14 @@ class StartMMPBatchTask extends PBMessage
   function set_seqId($value)
   {
     return $this->_set_value("3", $value);
+  }
+  function taskGroupName()
+  {
+    return $this->_get_value("4");
+  }
+  function set_taskGroupName($value)
+  {
+    return $this->_set_value("4", $value);
   }
 }
 class StartOSBatchTask extends PBMessage
@@ -1594,6 +1832,92 @@ class EndBatchTask extends PBMessage
   function set_seqId($value)
   {
     return $this->_set_value("2", $value);
+  }
+}
+class StopBatchTask extends PBMessage
+{
+  var $wired_type = PBMessage::WIRED_LENGTH_DELIMITED;
+  public function __construct($reader=null)
+  {
+    parent::__construct($reader);
+    $this->fields["1"] = "PBString";
+    $this->values["1"] = "";
+    $this->fields["2"] = "PBString";
+    $this->values["2"] = "";
+    $this->fields["3"] = "PBString";
+    $this->values["3"] = "";
+    $this->fields["4"] = "PBString";
+    $this->values["4"] = "";
+  }
+  function taskId()
+  {
+    return $this->_get_value("1");
+  }
+  function set_taskId($value)
+  {
+    return $this->_set_value("1", $value);
+  }
+  function appkey()
+  {
+    return $this->_get_value("2");
+  }
+  function set_appkey($value)
+  {
+    return $this->_set_value("2", $value);
+  }
+  function appId()
+  {
+    return $this->_get_value("3");
+  }
+  function set_appId($value)
+  {
+    return $this->_set_value("3", $value);
+  }
+  function seqId()
+  {
+    return $this->_get_value("4");
+  }
+  function set_seqId($value)
+  {
+    return $this->_set_value("4", $value);
+  }
+}
+class StopBatchTaskResult extends PBMessage
+{
+  var $wired_type = PBMessage::WIRED_LENGTH_DELIMITED;
+  public function __construct($reader=null)
+  {
+    parent::__construct($reader);
+    $this->fields["1"] = "PBBool";
+    $this->values["1"] = "";
+    $this->fields["2"] = "PBString";
+    $this->values["2"] = "";
+    $this->fields["3"] = "PBString";
+    $this->values["3"] = "";
+  }
+  function result()
+  {
+    return $this->_get_value("1");
+  }
+  function set_result($value)
+  {
+    return $this->_set_value("1", $value);
+  }
+  function info()
+  {
+    return $this->_get_value("2");
+  }
+  function set_info($value)
+  {
+    return $this->_set_value("2", $value);
+  }
+  function seqId()
+  {
+    return $this->_get_value("3");
+  }
+  function set_seqId($value)
+  {
+    return $this->_set_value("3", $value);
   }
 }
 class PushMMPAppMessage extends PBMessage

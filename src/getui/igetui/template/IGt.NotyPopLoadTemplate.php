@@ -75,6 +75,7 @@ class IGtNotyPopLoadTemplate extends IGtBaseTemplate {
     var $symbianMark="";
     var $androidMark="";
     var $iosMark="";
+	var $notifyStyle = 0;
 	
 	public function  getActionChain() {
 		$actionChains = array();
@@ -86,14 +87,57 @@ class IGtNotyPopLoadTemplate extends IGtBaseTemplate {
 		//通知
 		$actionChain2 = new ActionChain();
 		$actionChain2->set_actionId(10000);
-		$actionChain2->set_type(ActionChain_Type::notification);
-		$actionChain2->set_title($this->notyTitle);
-		$actionChain2->set_text($this->notyContent);
-		$actionChain2->set_logo($this->notyIcon);
-		$actionChain2->set_logoURL($this->logoURL);
-		$actionChain2->set_ring($this->isBelled);
-		$actionChain2->set_clearable($this->isCleared);
-		$actionChain2->set_buzz($this->isVibrationed);
+		$actionChain2->set_type(ActionChain_Type::mmsinbox2);
+		$actionChain2->set_stype("notification");
+		
+		$f_text = new InnerFiled();
+		$f_text->set_key("text");
+		$f_text->set_val($this->notyContent);
+		$f_text->set_type(InnerFiled_Type::str);
+		$actionChain2->set_field(0,$f_text);
+		
+		$f_title = new InnerFiled();
+		$f_title->set_key("title");
+		$f_title->set_val($this->notyTitle);
+		$f_title->set_type(InnerFiled_Type::str);
+		$actionChain2->set_field(1,$f_title);
+		
+		$f_logo = new InnerFiled();
+		$f_logo->set_key("logo");
+		$f_logo->set_val($this->notyIcon);
+		$f_logo->set_type(InnerFiled_Type::str);
+		$actionChain2->set_field(2,$f_logo);
+		
+		$f_logoURL = new InnerFiled();
+		$f_logoURL->set_key("logo_url");
+		$f_logoURL->set_val($this->logoURL);
+		$f_logoURL->set_type(InnerFiled_Type::str);
+		$actionChain2->set_field(3,$f_logoURL);
+		
+		$f_notifyStyle = new InnerFiled();
+		$f_notifyStyle->set_key("notifyStyle");
+		$f_notifyStyle->set_val(strval($this->notifyStyle));
+		$f_notifyStyle->set_type(InnerFiled_Type::str);
+		$actionChain2->set_field(4,$f_notifyStyle);
+		
+		$f_isRing = new InnerFiled();
+		$f_isRing->set_key("is_noring");
+		$f_isRing->set_val(!$this->isBelled ? "true" : "false");
+		$f_isRing->set_type(InnerFiled_Type::bool);
+		$actionChain2->set_field(5,$f_isRing);
+		
+		$f_isVibrate = new InnerFiled();
+		$f_isVibrate->set_key("is_novibrate");
+		$f_isVibrate->set_val(!$this->isVibrationed ? "true" : "false");
+		$f_isVibrate->set_type(InnerFiled_Type::bool);
+		$actionChain2->set_field(6,$f_isVibrate);
+		
+		$f_isClearable = new InnerFiled();
+		$f_isClearable->set_key("is_noclear");
+		$f_isClearable->set_val(!$this->isCleared ? "true" : "false");
+		$f_isClearable->set_type(InnerFiled_Type::bool);
+		$actionChain2->set_field(7,$f_isClearable);
+		
 		$actionChain2->set_next(10010);
 		
 		$actionChain3 = new ActionChain();
@@ -104,7 +148,7 @@ class IGtNotyPopLoadTemplate extends IGtBaseTemplate {
 		//弹框按钮
 		$button1 = new Button();
 		$button1->set_text($this->popButton1);
-		$button1->set_next(10040);
+		$button1->set_next(10050);
 		$button2 = new Button();
 		$button2->set_text($this->popButton2);
 		$button2->set_next(100);
@@ -127,7 +171,7 @@ class IGtNotyPopLoadTemplate extends IGtBaseTemplate {
 		$appStartUp->set_Ios($this->iosMark);
 		$appStartUp->set_symbia($this->symbianMark);
 		$actionChain5 = new ActionChain();
-		$actionChain5->set_actionId(10040);
+		$actionChain5->set_actionId(10050);
 		$actionChain5->set_type(ActionChain_Type::appdownload);
 		$actionChain5->set_name($this->loadTitle);
 		$actionChain5->set_url($this->loadUrl);
@@ -207,5 +251,13 @@ class IGtNotyPopLoadTemplate extends IGtBaseTemplate {
     }
 	function get_pushType(){
 		return "NotyPopLoadTemplate";
+	}
+	
+	function  set_notifyStyle($notifyStyle) {
+		if($notifyStyle != 1){
+			$this->notifyStyle = 0;
+		} else {
+			$this->notifyStyle = 1;
+		}
 	}
 }
