@@ -18,6 +18,10 @@ class GeTuiService implements PushInterface
      * @var Collection
      */
     protected $config;
+    protected $gt_appid;
+    protected $gt_appkey;
+    protected $gt_appsecret;
+    protected $gt_mastersecret;
 
     /**
      * @var array
@@ -25,8 +29,12 @@ class GeTuiService implements PushInterface
     protected $gateways = [];
 
 
-    public function __construct(array $config = [])
+    public function __construct(array $config = null)
     {
+        if(!$config){
+           $config =  include(__DIR__.'/config/getui.php');
+        }
+
         $this->config = new Repository($config);
 
         $appEnv = $this->config->get("app_env");
@@ -34,7 +42,7 @@ class GeTuiService implements PushInterface
         $config = $this->config->get("$appEnv.$client");
         $this->obj = new \IGeTui($config['gt_domainurl'], $config['gt_appkey'], $config['gt_mastersecret']);
         $this->gt_appid = $config['gt_appid'];
-        $this->gt_appsecret = $config['gt_appsecret'];
+        $this->gt_appkey = $config['gt_appkey'];
         $this->gt_appsecret = $config['gt_appsecret'];
         $this->gt_mastersecret = $config['gt_mastersecret'];
     }
@@ -50,7 +58,7 @@ class GeTuiService implements PushInterface
         $config = $this->config->get("$appEnv.$client");
         $this->obj = new \IGeTui($config['gt_domainurl'], $config['gt_appkey'], $config['gt_mastersecret']);
         $this->gt_appid = $config['gt_appid'];
-        $this->gt_appsecret = $config['gt_appsecret'];
+        $this->gt_appkey = $config['gt_appkey'];
         $this->gt_appsecret = $config['gt_appsecret'];
         $this->gt_mastersecret = $config['gt_mastersecret'];
         return $this;

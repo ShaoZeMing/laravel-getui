@@ -136,4 +136,4 @@ print_r($res);
 
 ## License
 
-Apache License
+MIT

@@ -2,7 +2,8 @@
 namespace Shaozeming\GeTui;
 
 use Illuminate\Support\ServiceProvider;
-
+use Illuminate\Foundation\Application as LaravelApplication;
+use Laravel\Lumen\Application as LumenApplication;
 
 /**
  * Class GeTuiServiceProvider
@@ -10,6 +11,9 @@ use Illuminate\Support\ServiceProvider;
  */
 class GeTuiServiceProvider extends ServiceProvider
 {
+
+    protected $defer = true;
+
     /**
      * Bootstrap any application services.
      *
@@ -18,11 +22,16 @@ class GeTuiServiceProvider extends ServiceProvider
     public function boot()
     {
 
-        if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__.'/config/getui.php' => config_path('getui.php'),
-            ], 'config');
+        $source = realpath(__DIR__.'/config/getui.php');
+
+
+
+        if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
+            $this->publishes([$source => config_path('getui.php')]);
+        } elseif ($this->app instanceof LumenApplication) {
+            $this->app->configure('getui');
         }
+        $this->mergeConfigFrom($source, 'hashids');
 
     }
 
