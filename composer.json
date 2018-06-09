@@ -30,7 +30,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ShaoZeMing\\GeTui\\ServiceProvider"
+                "ShaoZeMing\\GeTui\\GeTuiServiceProvider"
             ],
             "alias": {
                 "GeTui": "ShaoZeMing\\GeTui\\Facade"

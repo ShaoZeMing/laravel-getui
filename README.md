@@ -118,7 +118,7 @@ Example:
 
 ```php
     $deviceId = 'b2e5b64931f06f617e363b74c8057cf6';
-    多个push对象device_id 用数组传入
+   // 多个push对象device_id 用数组传入
    $deviceId = [
             'ea34a4715b08b1b8d77aabf36c977cba',
             'ea34a4715b08b1b8d77aabf36c977cba',
