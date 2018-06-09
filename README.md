@@ -32,7 +32,7 @@ if you want to use facade mode, you can register a facade name what you want to 
 // config/app.php
 
     'aliases' => [
-        'GeTui' => Shaozeming\GeTui\Facade::class, // This is default in laravel 5.5
+        'GeTui' => Shaozeming\GeTui\Facade\GeTui::class, // This is default in laravel 5.5
     ],
 ```
 
