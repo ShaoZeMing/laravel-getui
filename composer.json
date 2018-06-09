@@ -3,19 +3,17 @@
     "description": "一个适用于laravel和lumen框架的个推push推送服务包",
     "type": "library",
     "require": {
-        "laravel/framework": "~5.0",
+        "laravel/framework": "~5.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^6.3",
         "mockery/mockery": "^0.9.9"
     },
-
     "autoload": {
         "psr-4": {
             "Shaozeming\\GeTui\\": "./src"
         }
     },
-
     "autoload-dev": {
         "psr-4": {
             "ShaoZeMing\\GeTui\\Tests\\": "./tests/"
