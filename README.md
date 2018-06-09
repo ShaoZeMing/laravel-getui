@@ -1,4 +1,4 @@
-# Laravel GeTui
+# Laravel Or Lumen GeTui  
 
 基于 [个推官方SDK](http://docs.getui.com/getui/server/php/start/)  for Laravel.
 
@@ -7,6 +7,7 @@
 ```shell
 $ composer require shaozeming/laravel-getui -v
 ```
+### Laravel
 
 After updated composer, if you are using laravel version < 5.5, you need to register service provider: 
 
@@ -15,14 +16,14 @@ After updated composer, if you are using laravel version < 5.5, you need to regi
 
     'providers' => [
         //...
-        Shaozeming\GeTui\ServiceProvider::class,
+        Shaozeming\GeTui\GeTuiServiceProvider::class,
     ],
 ```
 
 And publish the config file: 
 
 ```shell
-$ php artisan vendor:publish --provider=Shaozeming\\GeTui\\ServiceProvider
+$ php artisan vendor:publish --provider=Shaozeming\\GeTui\\GeTuiServiceProvider
 ```
 
 if you want to use facade mode, you can register a facade name what you want to use, for example `GeTui`:
@@ -34,6 +35,12 @@ if you want to use facade mode, you can register a facade name what you want to 
         'GeTui' => Shaozeming\GeTui\Facade::class, // This is default in laravel 5.5
     ],
 ```
+
+### lumen
+
+- 在 bootstrap/app.php 中 82 行左右：
+$app->register(Shaozeming\GeTui\GeTuiServiceProvider::class);
+使用自定义 config/getui.php 来配置，将 vendor/shaozeming/laravel-getui/src/config/getui.php 拷贝到项目根目录/config目录下，并将文件名改成getui.php。
 
 ### configuration 
 
