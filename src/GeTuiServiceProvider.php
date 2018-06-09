@@ -24,14 +24,12 @@ class GeTuiServiceProvider extends ServiceProvider
 
         $source = realpath(__DIR__.'/config/getui.php');
 
-
-
         if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
             $this->publishes([$source => config_path('getui.php')]);
         } elseif ($this->app instanceof LumenApplication) {
             $this->app->configure('getui');
         }
-        $this->mergeConfigFrom($source, 'hashids');
+        $this->mergeConfigFrom($source, 'getui');
 
     }
 
