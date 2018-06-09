@@ -39,8 +39,10 @@ if you want to use facade mode, you can register a facade name what you want to 
 ### lumen
 
 - 在 bootstrap/app.php 中 82 行左右：
+```
 $app->register(Shaozeming\GeTui\GeTuiServiceProvider::class);
-使用自定义 config/getui.php 来配置，将 vendor/shaozeming/laravel-getui/src/config/getui.php 拷贝到项目根目录/config目录下，并将文件名改成getui.php。
+```
+将 `vendor/shaozeming/laravel-getui/src/config/getui.php` 拷贝到项目根目录`/config`目录下，并将文件名改成`getui.php`。
 
 ### configuration 
 
