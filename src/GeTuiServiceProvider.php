@@ -46,11 +46,14 @@ class GeTuiServiceProvider extends ServiceProvider
             return new GeTuiService($app->config->get('getui', []));
         });
 
+        $this->app->alias(GeTuiService::class, 'getui');
+
+
 
     }
 
     public function provides()
     {
-        return [GeTuiService::class];
+        return [GeTuiService::class,'getui'];
     }
 }

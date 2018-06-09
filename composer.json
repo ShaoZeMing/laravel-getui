@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Shaozeming\\GeTui\\": "src/"
+            "Shaozeming\\GeTui\\": "./src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ShaoZeMing\\GeTui\\Tests\\": "./tests"
+            "ShaoZeMing\\GeTui\\Tests\\": "./tests/"
         }
     },
     "extra": {
