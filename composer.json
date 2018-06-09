@@ -26,7 +26,16 @@
         "psr-4": {
             "ShaoZeMing\\GeTui\\Tests\\": "./tests/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ShaoZeMing\\GeTui\\GeTuiServiceProvider"
+            ],
+            "aliases": {
+                "GeTui": "ShaoZeMing\\GeTui\\Facade\\GeTui"
+            }
+        }
     }
-
 
 }
