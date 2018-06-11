@@ -16,7 +16,7 @@ $ composer require shaozeming/laravel-getui -v
 
     'providers' => [
         //...
-        Shaozeming\GeTui\GeTuiServiceProvider::class,
+        Shaozeming\GeTui\GeTuiServiceProvider::class,    //This is default in laravel 5.5
     ],
 ```
 
@@ -26,13 +26,13 @@ And publish the config file:
 $ php artisan vendor:publish --provider=Shaozeming\\GeTui\\GeTuiServiceProvider
 ```
 
-if you want to use facade mode, you can register a facade name what you want to use, for example `GeTui`:
+if you want to use facade mode, you can register a facade name what you want to use, for example `GeTui`: 
 
 ```php
 // config/app.php
 
     'aliases' => [
-        'GeTui' => Shaozeming\GeTui\Facade\GeTui::class, 
+        'GeTui' => Shaozeming\GeTui\Facade\GeTui::class,   //This is default in laravel 5.5
     ],
 ```
 
@@ -136,7 +136,7 @@ Example:
             ];
 
  
-$res = GeTui::push($deviceId, $data,true); //Using default default_client
+$res = \GeTui::push($deviceId, $data,true); //Using default default_client
 
 print_r($res);
 
