@@ -1,5 +1,5 @@
 <?php
-namespace Shaozeming\GeTui;
+namespace ShaoZeMing\GeTui;
 
 /**
  *  Message.php

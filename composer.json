@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Shaozeming\\GeTui\\": "./src"
+            "ShaoZeMing\\GeTui\\": "./src"
         }
     },
     "autoload-dev": {
@@ -29,10 +29,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Shaozeming\\GeTui\\GeTuiServiceProvider"
+                "ShaoZeMing\\GeTui\\GeTuiServiceProvider"
             ],
             "alias": {
-                "GeTui": "haozeming\\GeTui\\Facade\\GeTui"
+                "GeTui": "ShaoZeMing\\GeTui\\Facade\\GeTui"
             }
         }
     },

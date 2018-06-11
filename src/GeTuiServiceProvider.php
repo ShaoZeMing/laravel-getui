@@ -1,5 +1,5 @@
 <?php
-namespace Shaozeming\GeTui;
+namespace ShaoZeMing\GeTui;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Application as LaravelApplication;

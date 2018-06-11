@@ -1,6 +1,6 @@
 <?php
 
-namespace Shaozeming\Push\Exceptions;
+namespace ShaoZeMing\Push\Exceptions;
 /**
  *  SmsException.php
  *

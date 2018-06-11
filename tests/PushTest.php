@@ -6,7 +6,7 @@
  * $Id: TestSms.php 2017-08-17 上午10:08 $
  */
 
-namespace Shaozeming\GeTui\Test;
+namespace ShaoZeMing\GeTui\Test;
 require_once dirname(__FILE__) . '/../src/getui/IGt.Push.php';
 
 use PHPUnit\Framework\TestCase;

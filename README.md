@@ -16,14 +16,14 @@ $ composer require shaozeming/laravel-getui -v
 
     'providers' => [
         //...
-        Shaozeming\GeTui\GeTuiServiceProvider::class,    //This is default in laravel 5.5
+        ShaoZeMing\GeTui\GeTuiServiceProvider::class,    //This is default in laravel 5.5
     ],
 ```
 
 And publish the config file: 
 
 ```shell
-$ php artisan vendor:publish --provider=Shaozeming\\GeTui\\GeTuiServiceProvider
+$ php artisan vendor:publish --provider=ShaoZeMing\\GeTui\\GeTuiServiceProvider
 ```
 
 if you want to use facade mode, you can register a facade name what you want to use, for example `GeTui`: 
@@ -32,7 +32,7 @@ if you want to use facade mode, you can register a facade name what you want to 
 // config/app.php
 
     'aliases' => [
-        'GeTui' => Shaozeming\GeTui\Facade\GeTui::class,   //This is default in laravel 5.5
+        'GeTui' => ShaoZeMing\GeTui\Facade\GeTui::class,   //This is default in laravel 5.5
     ],
 ```
 
@@ -40,9 +40,9 @@ if you want to use facade mode, you can register a facade name what you want to 
 
 - 在 bootstrap/app.php 中 82 行左右：
 ```
-$app->register(Shaozeming\GeTui\GeTuiServiceProvider::class);
+$app->register(ShaoZeMing\GeTui\GeTuiServiceProvider::class);
 ```
-将 `vendor/shaozeming/laravel-getui/src/config/getui.php` 拷贝到项目根目录`/config`目录下，并将文件名改成`getui.php`。
+将 `vendor/ShaoZeMing/laravel-getui/src/config/getui.php` 拷贝到项目根目录`/config`目录下，并将文件名改成`getui.php`。
 
 ### configuration 
 
@@ -103,6 +103,7 @@ $app->register(Shaozeming\GeTui\GeTuiServiceProvider::class);
 Gateway instance:
 
 ```php
+use GeTui;
 //针对单个或者多个用户推送
 GeTui::push($deviceId, $data,true) //Using default default_client   推送给默认的客户端
 GeTui::toClient('CLIENT NAME')->push($deviceId, $data)  // CLIENT NAME is key name of `development` or `production`  configuration.  //自定义发送的客户端  

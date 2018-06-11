@@ -1,6 +1,6 @@
 <?php
 
-namespace Shaozeming\GeTui\Facade;
+namespace ShaoZeMing\GeTui\Facade;
 
 
 
