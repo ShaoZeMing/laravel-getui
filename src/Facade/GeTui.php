@@ -5,7 +5,7 @@ namespace ShaoZeMing\GeTui\Facade;
 
 
 use Illuminate\Support\Facades\Facade;
-use Shaozeming\GeTui\GeTuiService;
+use ShaoZeMing\GeTui\GeTuiService;
 
 
 /**

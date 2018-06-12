@@ -22,7 +22,7 @@ class GeTuiServiceProvider extends ServiceProvider
     public function boot()
     {
 
-        $source = realpath(__DIR__.'/config/getui.php');
+        $source = realpath(dirname(__DIR__).'/config/getui.php');
 
         if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
             $this->publishes([$source => config_path('getui.php')]);
