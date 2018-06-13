@@ -7,7 +7,7 @@ use Laravel\Lumen\Application as LumenApplication;
 
 /**
  * Class GeTuiServiceProvider
- * @package Shaozeming\GeTui
+ * @package ShaoZeMing\GeTui
  */
 class GeTuiServiceProvider extends ServiceProvider
 {

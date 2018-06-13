@@ -10,7 +10,7 @@ use ShaoZeMing\GeTui\GeTuiService;
 
 /**
  * Class Facade
- * @package Shaozeming\GeTui
+ * @package ShaoZeMing\GeTui
  */
 class GeTui extends Facade
 {

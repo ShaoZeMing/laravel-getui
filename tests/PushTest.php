@@ -10,7 +10,7 @@ namespace ShaoZeMing\GeTui\Test;
 require_once dirname(__FILE__) . '/../src/getui/IGt.Push.php';
 
 use PHPUnit\Framework\TestCase;
-use Shaozeming\GeTui\GeTuiService;
+use ShaoZeMing\GeTui\GeTuiService;
 
 
 class PushTest extends TestCase
