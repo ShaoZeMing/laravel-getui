@@ -2,6 +2,12 @@
 
 基于 [个推官方SDK](http://docs.getui.com/getui/server/php/start/)  for Laravel.
 
+
+---
+[![](https://travis-ci.org/ShaoZeMing/laravel-translate.svg?branch=master)](https://travis-ci.org/ShaoZeMing/laravel-getui) 
+[![](https://img.shields.io/packagist/v/ShaoZeMing/laravel-translate.svg)](https://packagist.org/packages/shaozeming/laravel-getui) 
+[![](https://img.shields.io/packagist/dt/ShaoZeMing/laravel-translate.svg)](https://packagist.org/packages/stichoza/shaozeming/laravel-getui)
+
 ## Installing
 
 ```shell
