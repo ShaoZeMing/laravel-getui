@@ -4,9 +4,9 @@
 
 
 ---
-[![](https://travis-ci.org/ShaoZeMing/laravel-translate.svg?branch=master)](https://travis-ci.org/ShaoZeMing/laravel-getui) 
-[![](https://img.shields.io/packagist/v/ShaoZeMing/laravel-translate.svg)](https://packagist.org/packages/shaozeming/laravel-getui) 
-[![](https://img.shields.io/packagist/dt/ShaoZeMing/laravel-translate.svg)](https://packagist.org/packages/stichoza/shaozeming/laravel-getui)
+[![](https://travis-ci.org/ShaoZeMing/laravel-getui.svg?branch=master)](https://travis-ci.org/ShaoZeMing/laravel-getui) 
+[![](https://img.shields.io/packagist/v/ShaoZeMing/laravel-getui.svg)](https://packagist.org/packages/shaozeming/laravel-getui) 
+[![](https://img.shields.io/packagist/dt/ShaoZeMing/laravel-getui.svg)](https://packagist.org/packages/stichoza/shaozeming/laravel-getui)
 
 ## Installing
 
