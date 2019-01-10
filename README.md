@@ -124,12 +124,12 @@ GeTui::toClient('CLIENT NAME')->pushToApp($data)  // GATEWAY NAME is key name of
 Example:
 
 ```php
-    $deviceId = 'b2e5b64931f06f617e363b74c8057cf6';
+    $deviceId = 'a1f3e7c11ca97924be6f291f2c09714b';
    // 多个push对象device_id 用数组传入
-   $deviceId = [
-            'ea34a4715b08b1b8d77aabf36c977cba',
-            'ea34a4715b08b1b8d77aabf36c977cba',
-           ];        
+//   $deviceId = [
+//            'a1f3e7c11ca97924be6f291f2c09714b',
+//            'ea34a4715b08b1b8d77aabf36c977cba',
+//           ];        
 
    $data = [
                 'url' => 'http://test.4d4k.com/push',
