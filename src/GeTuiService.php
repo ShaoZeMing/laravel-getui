@@ -146,6 +146,13 @@ class GeTuiService implements PushInterface
         }
         return $result;
 
+
+        //$2y$10$a6RR/UxbEYbmqfZi6zTiguPLV7cI.WtV7c/0.9nXeaSmf549VuDWe
+
+        //$2y$10$a6RR/UxbEYbmqfZi6zTiguPLV7cI.WtV7c/0.9nXeaSmf549VuDWe
+
+
+        //$2y$10$P7xOUnjy.AAzBY7QMxJqW.vDAai8dRmxSR3tmzlQ5HjcwVNRJNsAW    123123
     }
 
 
@@ -220,7 +227,7 @@ class GeTuiService implements PushInterface
     }
 
 //多推接口案例
-    function pushMessageToList($clientIds, $content, $title, $transContent, $isNotice = true, $shortUrl = '')
+    function pushMessageToList($clientIds,$transContent,  $content, $title, $isNotice = true, $shortUrl = '')
     {
         putenv("gexin_pushList_needDetails=true");
         putenv("gexin_pushList_needAsync=true");
