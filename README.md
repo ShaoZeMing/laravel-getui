@@ -8,7 +8,7 @@
 [![](https://img.shields.io/packagist/v/ShaoZeMing/laravel-getui.svg)](https://packagist.org/packages/shaozeming/laravel-getui) 
 [![](https://img.shields.io/packagist/dt/ShaoZeMing/laravel-getui.svg)](https://packagist.org/packages/stichoza/shaozeming/laravel-getui)
 
-## Installing
+## 安装
 
 ```shell
 $ composer require shaozeming/laravel-getui -v
