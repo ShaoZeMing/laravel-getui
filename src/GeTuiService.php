@@ -1,7 +1,6 @@
 <?php
 
 namespace ShaoZeMing\GeTui;
-use Illuminate\Config\Repository;
 use Illuminate\Support\Collection;
 
 //use Illuminate\Support\Facades\Log;
@@ -35,11 +34,11 @@ class GeTuiService implements PushInterface
            $config =  include(__DIR__.'/config/getui.php');
         }
 
-        $this->config = new Repository($config);
+        $this->config = $config;
 
-        $appEnv = $this->config->get("app_env");
-        $client = $this->config->get("default_client");
-        $config = $this->config->get("$appEnv.$client");
+        $appEnv = $this->config["app_env"];
+        $client = $this->config["default_client"];
+        $config = $this->config[$appEnv][$client];
         $this->obj = new \IGeTui($config['gt_domainurl'], $config['gt_appkey'], $config['gt_mastersecret']);
         $this->gt_appid = $config['gt_appid'];
         $this->gt_appkey = $config['gt_appkey'];
@@ -51,11 +50,11 @@ class GeTuiService implements PushInterface
 
     public function toClient($client = null)
     {
-        $appEnv = $this->config->get("app_env");
+        $appEnv = $this->config["app_env"];
         if (empty($client)) {
-            $client = $this->config->get("default_client");
+            $client = $this->config["default_client"];
         }
-        $config = $this->config->get("$appEnv.$client");
+        $config = $this->config[$appEnv][$client];
         $this->obj = new \IGeTui($config['gt_domainurl'], $config['gt_appkey'], $config['gt_mastersecret']);
         $this->gt_appid = $config['gt_appid'];
         $this->gt_appkey = $config['gt_appkey'];
