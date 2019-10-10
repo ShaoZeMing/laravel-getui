@@ -53,6 +53,7 @@ class PushTest extends TestCase
 //            return $getuiResponse;
         } catch (\Exception $e) {
 
+
             $err = "Error : 错误：" . $e->getMessage();
             echo $err.PHP_EOL;
 
